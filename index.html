@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brekky News — see how a story unfolds</title>
+<meta name="description" content="Brekky News groups related coverage into one story and shows how it changes over time: what happened, what changed, and who is reporting it.">
+<style>
+  :root {
+    --bg: #fbf7f0; --surface: #ffffff; --ink: #1f1a14; --muted: #6b6155;
+    --line: #e8dfd2; --accent: #d9822b; --accent-ink: #8a4a0f; --dot: #f3c98b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17140f; --surface: #211c16; --ink: #f3ece2; --muted: #b3a797;
+      --line: #3a3128; --accent: #f0a04b; --accent-ink: #f6c78f; --dot: #7a4d1c;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 28px 0 0; display: flex; align-items: center; gap: 10px; font-weight: 700; }
+  .sun { width: 22px; height: 22px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px var(--dot); }
+  .hero { padding: 64px 0 40px; }
+  .eyebrow { color: var(--accent-ink); font-size: 14px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 12px; }
+  h1 { font-size: clamp(34px, 6vw, 52px); line-height: 1.08; margin: 0 0 18px; letter-spacing: -.02em; }
+  .lede { font-size: 20px; color: var(--muted); margin: 0; max-width: 34em; }
+  h2 { font-size: 22px; margin: 0 0 16px; letter-spacing: -.01em; }
+  section { padding: 36px 0; border-top: 1px solid var(--line); }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .steps li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+  .steps b { display: block; margin-bottom: 2px; }
+  .steps span { color: var(--muted); }
+  .timeline { position: relative; margin: 0; padding: 0 0 0 26px; list-style: none; }
+  .timeline::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .timeline li { position: relative; padding: 0 0 18px; }
+  .timeline li::before { content: ""; position: absolute; left: -25px; top: 7px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--accent); }
+  .timeline li:last-child::before { background: var(--accent); }
+  .when { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .note { font-size: 14px; color: var(--muted); margin-top: 4px; }
+  footer { padding: 36px 0 56px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span class="sun" aria-hidden="true"></span> Brekky News</header>
+
+  <div class="hero">
+    <p class="eyebrow">News, one story at a time</p>
+    <h1>See how a story unfolds, not just the latest headline.</h1>
+    <p class="lede">Brekky News groups related coverage into one story and shows how it has changed: what happened first, what's new, which sources back it up, and what's still unclear.</p>
+  </div>
+
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><b>Collect</b><span>Brekky reads recent articles from a wide range of news sources.</span></li>
+      <li><b>Cluster</b><span>Articles about the same event are grouped into a single story, so you don't read it five times.</span></li>
+      <li><b>Track</b><span>Each meaningful update is added to the story's timeline, with links to the sources that reported it.</span></li>
+      <li><b>Brief</b><span>You open a story and get the current summary and what changed since you last looked.</span></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What a story looks like</h2>
+    <ol class="timeline">
+      <li><div class="when">Mon 07:10</div>First reports of the event appear in two outlets.</li>
+      <li><div class="when">Mon 12:40</div>Official statement confirms the key details.<div class="note">Confirmed by 6 sources</div></li>
+      <li><div class="when">Tue 06:55</div>New figures released; earlier estimate revised.<div class="note">Latest change</div></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>What's next</h2>
+    <p>Follow topics, people and companies, and get a short personalised morning briefing, including an audio version for the commute.</p>
+  </section>
+
+  <footer>Brekky News · made in Melbourne</footer>
+</div>
+</body>
+</html>
